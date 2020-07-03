@@ -1,0 +1,44 @@
+.navbar
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    width: 48px
+    background: #82B284
+
+.navbar__icons-wrapper
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    padding: 0
+    position: absolute
+    width: 20px
+    left: 14px
+    align-items: center
+    box-sizing: border-box
+
+.navbar__icon
+    margin: 20px auto
+    height: 20px
+
+.navbar__icons-wrapper_top
+    top: 0
+    justify-content: flex-start
+
+.navbar__icons-wrapper_bottom
+    bottom: 0
+    ustify-content: flex-end
+    &::before
+        content: ''
+        width: 32px
+        height: 1px
+        background-color:#A4C7A5
+
+@media (max-height: 620px)
+    .navbar__icon
+        margin: 15px auto
+
+@media (max-height: 520px)
+    .navbar__icon
+        margin: 12px auto
+    
