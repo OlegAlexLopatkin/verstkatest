@@ -6,10 +6,9 @@
     right: 0
     top: 0
     background-color: rgba(0, 0, 0, .5)
+    z-index: 3
 
 .card__dialog
-    width: 320px
-    height: 198px
     background: #FFFFFF
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15)
     position: absolute
@@ -19,26 +18,30 @@
     transform: translate(-50%, -50%)
 
 .card__title
-    position: absolute
-    left: 24px
-    top: 24px
+    margin: 24px
+    margin-bottom: 0
     font-family: "proxima-nova", sans-serif
     font-style: normal
     font-weight: normal
     font-size: 20px
     line-height: 28px
     color: #3B3B3B
+    width: 272px
 
 .card__text
-    position: absolute
-    left: 24px
-    top: 68px
+    margin: 16px 24px
     font-family: "proxima-nova", sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
     line-height: 18px
     color: #3B3B3B
+    width: 272px
+
+.card__buttton-line
+    margin: 50px 24px 24px
+    display: flex
+    justify-content: space-between
 
 .card__buttton
     font-family: "proxima-nova", sans-serif
@@ -50,15 +53,10 @@
     background: #fff
     cursor: pointer
     outline: none
+    text-transform: uppercase
 
 .card__buttton_cancel
-    position: absolute
-    left: 24px
-    top: 154px
     color: #B9B9B9
 
 .card__buttton_remove
-    position: absolute
-    left: 222px
-    top: 154px
     color: #82B284

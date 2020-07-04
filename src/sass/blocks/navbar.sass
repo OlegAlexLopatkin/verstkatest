@@ -12,14 +12,21 @@
     flex-direction: column
     padding: 0
     position: absolute
-    width: 20px
-    left: 14px
+    width: 48px
+    left: 0
     align-items: center
     box-sizing: border-box
 
 .navbar__icon
-    margin: 20px auto
-    height: 20px
+    width: 48px
+    height: 60px
+    margin: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+.navbar__icon_active
+    background: #A4C7A5
 
 .navbar__icons-wrapper_top
     top: 0
@@ -36,9 +43,9 @@
 
 @media (max-height: 620px)
     .navbar__icon
-        margin: 15px auto
+        height: 50px
 
 @media (max-height: 520px)
     .navbar__icon
-        margin: 12px auto
+        height: 44px
     
