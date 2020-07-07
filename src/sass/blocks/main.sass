@@ -6,7 +6,6 @@
     box-sizing: border-box
 
 .main__title
-    margin-top: 101px
     font-family: "proxima-nova", sans-serif
     font-style: normal
     font-weight: normal
@@ -59,22 +58,20 @@
     align-items: center
     justify-content: flex-start
 
-.main__section-line
+.main__section-enumeration
     font-family: "proxima-nova", sans-serif
     font-style: normal
     font-weight: normal
     font-size: 16px
     line-height: 20px
     margin: 0 40px 12px 0
-    display: flex
-    justify-content: flex-start
+    display: grid
+    grid-template-columns: 150px 1fr
+    gap: 12px
 
 .main__line-name
     color: #808080
-    width: 150px
-    margin-right: 12px
     display: inline-block
-    flex-shrink: 0
 
 .main__line-text
     color: #3B3B3B

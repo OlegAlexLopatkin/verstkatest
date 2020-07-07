@@ -87,6 +87,7 @@ const renderFileItem = ({ file, fileItemId }) => {
         viewBox="0 0 15 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        class="file__delete-icon"
       >
         <line
           x1="9.89948"
@@ -137,6 +138,7 @@ const renderFileItem = ({ file, fileItemId }) => {
           viewBox="0 0 15 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="file__delete-icon"
         >
           <line
             x1="9.89948"
@@ -219,6 +221,30 @@ document
   .addEventListener("click", (e) => {
     document.querySelector(".card").style.display = "";
   });
+
+//Вычисление margin-top для <h2 class="main__title"></h2>
+const calculateMarginTopTitle = () => {
+  //Чтобы не засорять глобальную область видимости
+  //сделал header, styles и title локальными.
+  const header = document.querySelector(".header");
+  const styles = getComputedStyle(header);
+  const title = document.querySelector(".main__title");
+  title.style.marginTop = 28 + parseFloat(styles.height) + "px";
+};
+
+let resizeTimeout;
+
+const resizeThrottler = () => {
+  if (!resizeTimeout) {
+    resizeTimeout = setTimeout(function () {
+      resizeTimeout = null;
+      calculateMarginTopTitle();
+    }, 66);
+  }
+};
+
+window.addEventListener("load", calculateMarginTopTitle);
+window.addEventListener("resize", resizeThrottler);
 
 // Данное событие добавлено, чтобы показать верстку списка файлов
 // В рабочем варинте этого события не будет
